@@ -35,7 +35,6 @@ Example request:
   "userInput": "What is React?"
 }
 
-```markdown
 The backend:
 
 1. Receives the user input.
@@ -45,8 +44,7 @@ The backend:
 5. Receives the AI-generated response.
 6. Saves the request and response in MongoDB.
 7. Returns the response to the client.
-
-```markdown
+```
 
 ---
 
