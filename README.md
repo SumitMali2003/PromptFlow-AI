@@ -1,29 +1,3 @@
-# PromptFlow-AI
-
-A full-stack MERN application that processes user prompts using reusable prompt templates stored in MongoDB and generates AI responses using a locally hosted LLM through Ollama.
-
-The application supports both single-prompt and batch-prompt processing. Every processed request and its AI-generated response is stored in MongoDB.
-
----
-
-## 📌 Overview
-
-PromptFlow-AI was built as a technical case-study application to demonstrate:
-
-- REST API development using Node.js and Express.js
-- MongoDB database integration
-- Reusable prompt templates stored in MongoDB
-- Dynamic replacement of `{{userInput}}`
-- AI response generation using Ollama and Gemma 3 1B
-- Request and response history persistence
-- Asynchronous batch processing
-- React frontend integration
-- Separation of routes, controllers, services, and models
-
----
-
-## 🚀 Features
-
 ### 1. Single Prompt Processing
 
 The application accepts a single user input and processes it through the complete AI pipeline.
@@ -34,6 +8,7 @@ Example request:
 {
   "userInput": "What is React?"
 }
+```
 
 The backend:
 
@@ -44,7 +19,6 @@ The backend:
 5. Receives the AI-generated response.
 6. Saves the request and response in MongoDB.
 7. Returns the response to the client.
-```
 
 ---
 
@@ -62,6 +36,7 @@ Example request:
     "What is MongoDB?"
   ]
 }
+```
 
 Each input is processed independently using asynchronous execution.
 
@@ -69,6 +44,7 @@ The implementation uses:
 
 ```javascript
 Promise.all()
+```
 
 This allows multiple inputs to be processed concurrently while preserving the order of the returned responses.
 
